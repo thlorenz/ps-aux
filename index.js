@@ -32,7 +32,7 @@ function parseLine(line) {
 }
 
 /**
- * Creates a psaux object.
+ * Creates a `psaux` object.
  * 
  * @name Psaux
  */
@@ -47,9 +47,9 @@ inherits(Psaux, EE);
 var proto = Psaux.prototype;
 
 /**
- * Obtains process information
+ * Obtains raw process information
  * 
- * @name obtain
+ * @name psaux::obtain
  * @function
  * @param {function} cb called back with an array of strings each containing information of a running process
  */
@@ -166,7 +166,7 @@ proto.setInterval = function setInterval_(opts) {
  * Clears any previously registered interval at which process information was obtained
  * and emitted.
  * 
- * @name clearInterval
+ * @name psaux::clearInterval
  * @function
  */
 proto.clearInterval = function clearInterval_() {
