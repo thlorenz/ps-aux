@@ -97,18 +97,20 @@ proto.parseLines = function parseLines(lines) {
  * @name psaux::parsed
  * @function
  * @param {function} cb called back with an array containing running process information
+ *
  * **process info:**
- *  - user    : id of the user that owns the process
- *  - pid     : process id
- *  - %cpu    : percent of the CPU usage
- *  - %mem    : percent memory usage
- *  - vsz     : virtual memory size
- *  - rss     : resident set size
- *  - tty     : controlling terminal
- *  - state   : current state of the process (i.e. sleeping)
- *  - started : start time of process
- *  - time    : how long the process is running
- *  - command : command line used to start the process (including args)
+ *
+ *  - **user**    : id of the user that owns the process
+ *  - **pid**     : process id
+ *  - **%cpu**    : percent of the CPU usage
+ *  - **%mem**    : percent memory usage
+ *  - **vsz**     : virtual memory size
+ *  - **rss**     : resident set size
+ *  - **tty**     : controlling terminal
+ *  - **state**   : current state of the process (i.e. sleeping)
+ *  - **started** : start time of process
+ *  - **time**    : how long the process is running
+ *  - **command** : command line used to start the process (including args)
  */
 proto.parsed = function parsed(cb) {
   var self = this;
@@ -165,6 +167,8 @@ proto.setInterval = function setInterval_(opts) {
 /**
  * Clears any previously registered interval at which process information was obtained
  * and emitted.
+ *
+ * @see psaux::setInterval
  * 
  * @name psaux::clearInterval
  * @function

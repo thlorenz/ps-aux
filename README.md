@@ -1,12 +1,14 @@
 # ps-aux [![build status](https://secure.travis-ci.org/thlorenz/ps-aux.png)](http://travis-ci.org/thlorenz/ps-aux)
 
-Supplies process information via the ps aux command.
+Supplies process information via the `ps aux` command.
+
+Tested on Linux and OSX.
 
 ```js
 var Psaux = require('psaux')
   , psaux = Psaux();
 
-Psaux.parsed(function (err, res) {
+psaux.parsed(function (err, res) {
   if (err) return console.error(err);
   console.log(res);
 })
@@ -45,12 +47,6 @@ Psaux.parsed(function (err, res) {
     npm install ps-aux
 
 ## API
-
-
-## License
-
-MIT
-
 
 <!-- START docme generated API please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN docme TO UPDATE -->
@@ -98,9 +94,15 @@ and emitted.</p>
 <li>
 <a href="https://github.com/thlorenz/ps-aux/blob/master/index.js">index.js</a>
 <span>, </span>
-<a href="https://github.com/thlorenz/ps-aux/blob/master/index.js#L165">lineno 165</a>
+<a href="https://github.com/thlorenz/ps-aux/blob/master/index.js#L167">lineno 167</a>
 </li>
 </ul></dd>
+<dt class="tag-see">See:</dt>
+<dd class="tag-see">
+<ul>
+<li><a href="global.html#psaux::setInterval">psaux::setInterval</a></li>
+</ul>
+</dd>
 </dl>
 </dd>
 <dt>
@@ -170,19 +172,21 @@ and heap memory.</p>
 <td class="type">
 <span class="param-type">function</span>
 </td>
-<td class="description last"><p>called back with an array containing running process information
-<strong>process info:</strong>
-- user    : id of the user that owns the process
-- pid     : process id
-- %cpu    : percent of the CPU usage
-- %mem    : percent memory usage
-- vsz     : virtual memory size
-- rss     : resident set size
-- tty     : controlling terminal
-- state   : current state of the process (i.e. sleeping)
-- started : start time of process
-- time    : how long the process is running
-- command : command line used to start the process (including args)</p></td>
+<td class="description last"><p>called back with an array containing running process information</p>
+<p><strong>process info:</strong></p>
+<ul>
+<li><strong>user</strong>    : id of the user that owns the process</li>
+<li><strong>pid</strong>     : process id</li>
+<li><strong>%cpu</strong>    : percent of the CPU usage</li>
+<li><strong>%mem</strong>    : percent memory usage</li>
+<li><strong>vsz</strong>     : virtual memory size</li>
+<li><strong>rss</strong>     : resident set size</li>
+<li><strong>tty</strong>     : controlling terminal</li>
+<li><strong>state</strong>   : current state of the process (i.e. sleeping)</li>
+<li><strong>started</strong> : start time of process</li>
+<li><strong>time</strong>    : how long the process is running</li>
+<li><strong>command</strong> : command line used to start the process (including args)</li>
+</ul></td>
 </tr>
 </tbody>
 </table>
@@ -258,7 +262,7 @@ When invoked, previously set intervals are cancelled.</p>
 <li>
 <a href="https://github.com/thlorenz/ps-aux/blob/master/index.js">index.js</a>
 <span>, </span>
-<a href="https://github.com/thlorenz/ps-aux/blob/master/index.js#L143">lineno 143</a>
+<a href="https://github.com/thlorenz/ps-aux/blob/master/index.js#L145">lineno 145</a>
 </li>
 </ul></dd>
 </dl>
@@ -271,3 +275,7 @@ When invoked, previously set intervals are cancelled.</p>
 *generated with [docme](https://github.com/thlorenz/docme)*
 </div>
 <!-- END docme generated API please keep comment here to allow auto update -->
+
+## License
+
+MIT
