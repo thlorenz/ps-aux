@@ -1,7 +1,6 @@
-# ps-aux
-[![build status](https://secure.travis-ci.org/thlorenz/ps-aux.png)](http://travis-ci.org/thlorenz/ps-aux)
+# ps-aux [![build status](https://secure.travis-ci.org/thlorenz/ps-aux.png)](http://travis-ci.org/thlorenz/ps-aux)
 
-Supplies process information via the ps -aux command.
+Supplies process information via the ps aux command.
 
 ```js
 // TODO
