@@ -177,3 +177,25 @@ proto.clearInterval = function clearInterval_() {
   clearInterval(this._intervalToken);
   this._intervalToken = undefined;
 }
+
+/**
+ * A singleton psaux instance.
+ * Use it in order to ensure that you only use one instance throughout your app.
+ *
+ * #### Example
+ *
+ * ```js
+ * // foo.js
+ * var psaux = require('ps-aux').singleton
+ * psaux.setInterval({ parsed: true, interval: 5000 });
+ *
+ * // bar.js
+ * var psaux = require('ps-aux').singleton
+ * psaux.on('info', console.log);
+ * ```
+ * 
+ * @name psaux::singleton
+ * @function
+ * @return {object} a constructed `psaux` object
+ */
+proto.singleton = require('./singleton');

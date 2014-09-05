@@ -42,6 +42,24 @@ psaux.parsed(function (err, res) {
 ]
 ```
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [Installation](#installation)
+- [API](#api)
+    - [Psaux](#psaux)
+    - [psaux::clearInterval()](#psauxclearinterval)
+    - [psaux::obtain(cb)](#psauxobtaincb)
+    - [psaux::parsed(cb)](#psauxparsedcb)
+    - [psaux::setInterval(opts)](#psauxsetintervalopts)
+    - [psaux::singleton() → {object}](#psauxsingleton-→-object)
+    - [Example](#example)
+- [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
 ## Installation
 
     npm install ps-aux
@@ -265,6 +283,44 @@ When invoked, previously set intervals are cancelled.</p>
 <a href="https://github.com/thlorenz/ps-aux/blob/master/index.js#L145">lineno 145</a>
 </li>
 </ul></dd>
+</dl>
+</dd>
+<dt>
+<h4 class="name" id="psaux::singleton"><span class="type-signature"></span>psaux::singleton<span class="signature">()</span><span class="type-signature"> &rarr; {object}</span></h4>
+</dt>
+<dd>
+<div class="description">
+<p>A singleton psaux instance.
+Use it in order to ensure that you only use one instance throughout your app.</p>
+<h4>Example</h4>
+<pre><code class="lang-js">// foo.js
+var psaux = require('ps-aux').singleton
+psaux.setInterval({ parsed: true, interval: 5000 });
+// bar.js
+var psaux = require('ps-aux').singleton
+psaux.on('info', console.log);</code></pre>
+</div>
+<dl class="details">
+<dt class="tag-source">Source:</dt>
+<dd class="tag-source"><ul class="dummy">
+<li>
+<a href="https://github.com/thlorenz/ps-aux/blob/master/index.js">index.js</a>
+<span>, </span>
+<a href="https://github.com/thlorenz/ps-aux/blob/master/index.js#L181">lineno 181</a>
+</li>
+</ul></dd>
+</dl>
+<h5>Returns:</h5>
+<div class="param-desc">
+<p>a constructed <code>psaux</code> object</p>
+</div>
+<dl>
+<dt>
+Type
+</dt>
+<dd>
+<span class="param-type">object</span>
+</dd>
 </dl>
 </dd>
 </dl>
