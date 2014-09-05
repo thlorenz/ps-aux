@@ -198,4 +198,4 @@ proto.clearInterval = function clearInterval_() {
  * @function
  * @return {object} a constructed `psaux` object
  */
-proto.singleton = require('./singleton');
+Psaux.singleton = require('./singleton');
