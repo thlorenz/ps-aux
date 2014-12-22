@@ -18,11 +18,11 @@ function parseLine(line) {
   var parts = line.split(/ +/);
   return {
       user    : parts[0]
-    , pid     : parseInt(parts[1])
+    , pid     : parseInt(parts[1], 10)
     , '%cpu'  : parseFloat(parts[2])
     , '%mem'  : parseFloat(parts[3])
-    , vsz     : parseInt(parts[4])
-    , rss     : parseInt(parts[5])
+    , vsz     : parseInt(parts[4], 10)
+    , rss     : parseInt(parts[5], 10)
     , tty     : parts[6]
     , state   : parts[7]
     , started : parts[8]
